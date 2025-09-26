@@ -1,6 +1,6 @@
 from typing import List, Tuple
-# from local_driver import Alg3D, Board # ローカル検証用
-from framework import Alg3D, Board # 本番用
+from local_driver import Alg3D, Board # ローカル検証用
+# from framework import Alg3D, Board # 本番用
 import math
 
 class MyAI(Alg3D):
@@ -58,8 +58,8 @@ class MyAI(Alg3D):
             # print("Action :", action)
             # if winning move, play it
             new_board = self.result(board, action)
-            # if self.is_terminal(new_board) and self.end_value == 1:
-            #     return (action[1], action[2])
+            if self.is_terminal(new_board) and self.end_value == 1:
+                return (action[1], action[2])
             current = self.alpha_beta_minimax(new_board, False, 0, 3, alpha=-math.inf, beta=math.inf)
             # print("Action :", action, "Score :", current, "\n\n")
             if current > best_score:
