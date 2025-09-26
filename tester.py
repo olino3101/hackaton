@@ -1,5 +1,8 @@
 from main import MyAI
+# from framework import Alg3D, Board # 本番用
 import random
+from local_driver import Alg3D, Board # ローカル検証用
+
 
 def add_random_move(board):
     while True:
