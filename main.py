@@ -135,8 +135,9 @@ class MyAI(Alg3D):
         if all(board[3][y][x] != 0 for x in range(4) for y in range(4)):
             self.over = True
             self.end_value = 0
+            return False
             # print("Draw")
-        return self.over
+        return False
 
 
     def evaluate(self, board):
