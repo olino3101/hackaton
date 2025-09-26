@@ -1,9 +1,9 @@
 from typing import List, Tuple
 #from local_driver import Alg3D, Board # ローカル検証用
-# from framework import Alg3D, Board # 本番用
+from framework import Alg3D, Board # 本番用
 import math
 
-class MyAI():
+class MyAI(Alg3D):
     def __init__(self):
         # all possible winning lines
         self.lines = self.generate_lines()
